@@ -47,6 +47,14 @@
     color: #2e81f4;
 }
 
+.header__options--active > .MuiSvgIcon-root{
+    color: #2e81f4;
+}
+
+.header__options--active {
+    border-bottom: 4px solid #2e81f4;
+}
+
 .header__options {
     display: flex;
     align-items: center;
