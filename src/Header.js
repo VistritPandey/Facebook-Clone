@@ -43,7 +43,7 @@ function Header() {
             <div className="header__right">
                 <div className="header__info">
                     <Avatar />
-                    <h4>Hello user</h4>
+                    <h4>Hello</h4>
                 </div>
                 <IconButton>
                     <AddIcon />
