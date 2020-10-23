@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+It's just a facebook clone, don't try to look for hackable elements :)
