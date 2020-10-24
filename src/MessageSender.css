@@ -45,7 +45,7 @@
 .messageSender__option >h3{
     font-size: medium;
     margin-left: 10px;
-    padding: 25px;
+    padding-right: 50px;
     cursor: pointer;
 }
 .messageSender__option:hover{
