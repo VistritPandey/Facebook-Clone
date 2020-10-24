@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './Feed.css'
 import MessageSender from './MessageSender'
 import StoryReel from './StoryReel'
@@ -9,7 +9,9 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        
+        db.collection('posts').onSnapshot(snapshot =>(
+            setPosts(snapshot.docs.map(doc =>({id: doc.id, data: doc.data()})))
+        ))
         
     }, [])
     return (
