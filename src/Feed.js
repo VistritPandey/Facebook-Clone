@@ -9,8 +9,8 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot =>(
-            setPosts(snapshot.docs.map(doc =>({id: doc.id, data: doc.data()})))
+        db.collection('posts').orderBy("timestamp","desc").onSnapshot(snapshot =>(
+            setPosts(snapshot.docs.map((doc) =>({id: doc.id, data: doc.data()})))
         ))
         
     }, [])
@@ -18,19 +18,15 @@ function Feed() {
         <div className="feed">
             <StoryReel />
             <MessageSender />
-            <Post 
-                profilePic=""
-                message="Okay"
-                timestamp="to ka"
-                username="helmart"
-                image="https://images.financialexpress.com/2017/11/modthumbs.png"
-            />
-            <Post 
-                profilePic=""
-                message="Okay"
-                timestamp="to ka"
-                username="helmart"
-                />
+            {posts.map((post)=> (
+                <Post 
+                key={post.id}
+                profilePic={post.data.profilePic}
+                message={post.data.message}
+                timestamp={post.data.timestamp}
+                username={post.data.username}
+                image={post.data.image}/>
+            ))}
         </div>
     )
 }
