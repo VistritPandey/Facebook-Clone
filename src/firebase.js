@@ -2,14 +2,7 @@ import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDknUEvUXhOdZuIdUGaAXJpvmPnUSl2qrY",
-  authDomain: "vistrit-facebook.firebaseapp.com",
-  databaseURL: "https://vistrit-facebook.firebaseio.com",
-  projectId: "vistrit-facebook",
-  storageBucket: "vistrit-facebook.appspot.com",
-  messagingSenderId: "116882626438",
-  appId: "1:116882626438:web:116ffa896e30ab8391fe07",
-  measurementId: "G-RCLB6DGHVQ"
+  // use your own config file
   };
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
